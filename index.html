@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> WEST HAM AND SWISS </title>
-    <meta charset = "utf-8">
-  </head>
-  <body>
-    <p> hello world </p>
-  </body>
+<head>
+  <title></title>
+  <meta charset="utf-8"></meta>
+  <script>
+    var count = 0;
+    function stop(){
+      if (count % 2 == 0){
+        document.getElementById("bgvid").pause();
+        count++;
+      }else{
+        document.getElementById("bgvid").play();
+        count++;
+      }
+    }
+  </script>
+  <style>
+    video#bgvid {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      background: url(July30/DSC_0001.jpg) no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+	<video playsinline autoplay muted loop poster="July30/DSC_0001.jpg" id="bgvid" onclick="stop()">
+		<source src="https://www.facebook.com/nazemspremierleague/videos/984832624964346/" type="video/mp4">
+	</video>
+<h2>WEST HAM AND SWISS UNITED FC</h2>
+<!-- <canvas id = "defaultCanvas0" height="1000" width="1000" style="border:1px solid black;"></canvas> -->
+</body>
 </html>
